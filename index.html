@@ -12,16 +12,52 @@
         <main>
             <div class="container">
                 <div class="row">
-                    <div class="col-md-3"> <h2>Profile</h2>
+                    <!--<div id="app"> -->
+                        <div class="col-md-4"> <h2><strong>Profile</strong></h2>
                         <div id="app">
-                            <pre>First Name: {{ posts.first_name }}</pre>
-                            <pre>Last Name: {{ posts.last_name }}</pre>
-                            <img :src="posts.profile_picture" alt="Profile Picture">
+                            <div>
+                                <pre>Full Name: {{ posts.first_name }} {{ posts.last_name }}</pre>
+                                <pre>Age: {{posts.age}} </pre>
+                                <p>
+                                    <img :src="posts.profile_picture" alt="Profile Picture">
+                                </p>
+                                <div>
+                                    <button @click="fetchdata" type="submit">NEW PROFILE</button>
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="col-md-4"><h2><strong>Weather</strong></h2>
+                            <div id="app">
+                                <div>
+                                    <p>
+                                        <label>City: </label>
+                                        <input type="text" id="city">
+                                    </p>
+                                    <p>
+                                        <label>Province: </label>
+                                        <input type="text" id="city">
+                                    </p>
+                                    <p>
+                                        <label>Country: </label>
+                                        <input type="text" id="city">
+                                    </p>
+                                    <p>
+                                        <button @click="getWeather" type="submit">Get Weather</button>
+                                    </p>
+                                    <p>
+                                        {{weather}}
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4"><h2><strong>Dictionary</strong></h2>
+                            <input v-model="" placeholder="Enter a word">
                             <p>
-                                <button @click="fetchdata" type="submit">NEW PROFILE</button>
+                                <button @click="gwtword" type="submit">Find Word</button>
                             </p>
                         </div>
-                    </div>
+                    <!--</div> -->
                 </div>
             </div>
         </main>   
