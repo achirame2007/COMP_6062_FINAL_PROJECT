@@ -27,28 +27,26 @@
                             </div>
                         </div>
                         </div>
-                        <div class="col-md-4"><h2><strong>Weather</strong></h2>
-                            <div id="app">
-                                <div>
-                                    <p>
-                                        <label>City: </label>
-                                        <input type="text" id="city">
-                                    </p>
-                                    <p>
-                                        <label>Province: </label>
-                                        <input type="text" id="city">
-                                    </p>
-                                    <p>
-                                        <label>Country: </label>
-                                        <input type="text" id="city">
-                                    </p>
-                                    <p>
-                                        <button @click="getWeather" type="submit">Get Weather</button>
-                                    </p>
-                                    <p>
+                        <div id="app" class="col-md-4"><h2><strong>Weather</strong></h2>
+                            <div>
+                                <p>
+                                    <label>City: </label>
+                                    <input type="text" id="city">
+                                </p>
+                                <p>
+                                    <label>Province: </label>
+                                    <input type="text" id="city">
+                                </p>
+                                <p>
+                                    <label>Country: </label>
+                                    <input type="text" id="city">
+                                </p>
+                                <p>
+                                    <button @click="getWeather" type="submit">Get Weather</button>
+                                </p>
+                                <p>
                                         {{weather}}
-                                    </p>
-                                </div>
+                                </p>
                             </div>
                         </div>
                         <div class="col-md-4"><h2><strong>Dictionary</strong></h2>
