@@ -7,7 +7,7 @@ h1{
     font-family:sans-serif;
 }
 body{
-    background-color: rgb(238, 225, 225);
+    background-color: white;
 }
 
 .col-md-4{
@@ -19,4 +19,25 @@ body{
 
 h2{
     color: black;
+}
+
+@media(max-width: 650px) {
+    body {
+        background-color: gray;
+    }
+    .col-md-4{
+        background-color: whitesmoke;
+        color: green;
+        font: solid;
+        border: 5px, solid;
+        border-color: black;
+    }
+    h1{
+        color:greenyellow;
+        border: 5px, solid;
+        border-color:black;
+        background-color: white;
+        font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    }
+
 }
