@@ -70,16 +70,18 @@ const app = Vue.createApp({
             }
             else
             {
-            fetch('https://comp6062.liamstewart.ca/define?word=' + word)
-            .then(response => {
-                if(response.ok) {
-                    return response.json();
-                }
-                else {
-                    console.log('An Error Occured');
-                }
-            })
-            .catch(error => console.log('No word found'));
+                fetch('https://comp6062.liamstewart.ca/define?word=' + word)
+                .then(response => {
+                    if(response.ok) {
+                        return response.json();
+                    }
+                    else {
+                        console.log('An Error Occured');
+                    }
+                })
+                .then(data => {
+                    this.define = data[0];
+                })
             }
         }
     }
